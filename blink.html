@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title class="blinkTitle">ROHTO | DRY EYE</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/common.css" media="(min-width: 800px)"/>
+        <link rel="stylesheet" type="text/css" href="css/common_sp.css" media="(max-width: 799px)"/>
+        <link rel="stylesheet" type="text/css" href="css/blink.css" media="(min-width: 800px)"/>
+        <link rel="stylesheet" type="text/css" href="css/blink_sp.css" media="(max-width: 799px)"/>
+    </head>
+<body>
+<div class="main-container">
+
+    <div class="heading-text-box">
+        <span class="heading-text blinkHeadingText"></span>
+    </div>
+    
+    <div id="step0-box" class="content-container">
+        <div class="content-window">
+            <div class="content-box">
+                <div class="content-text-box">
+                    <span class="content-text blinkStepHeadingText0_1"></span><br />
+                    <br />
+                    <span class="content-text blinkStepHeadingText0_2"></span>
+                </div>
+                <div id="start-button" class="button-green next-button button-center-center blinkStartButton"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="step1-box" class="content-container">
+        <div class="content-window">
+            <div class="content-box content-prepare-box">
+                <canvas id="fromVideo"></canvas>
+                <img id="image-face-frame" class="image-face-frame" src="./images/blink/face_frame.png" />
+                <div class="content-area">
+                    <div class="content-text-box2">
+                        <span class="content-text blinkStepHeadingText1"></span>
+                    </div>
+
+                    <div class="next-button-box">
+                        <div class="button-green next-button active button-bottom-right blinkNextButton"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="step2-box" class="content-container">
+        <div class="content-window">
+            <div class="content-box content-blink-box">
+                <div class="content-area">
+                    <div class="content-text-box">
+                        <span class="content-text blinkStepHeadingText2_1"></span>
+                        <span class="content-text2 blinkStepHeadingText2_2"></span>
+                        <span class="content-text blinkStepHeadingText2_3"></span>
+                    </div>
+
+                    <div class="time-bar-box time-bar-box-nomargin">
+                        <div class="time-bar-area">
+                            <div class="time-bar-back"></div>
+                            <div id="time-bar-front" class="time-bar-front"></div>
+                        </div>
+                        <div class="time-bar-value-box">
+                            <div>0 <span class="blinkSecUnit"></span></div>
+                            <div>10 <span class="blinkSecUnit"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="clipped-image-area">
+                        <canvas id="clipped"></canvas>
+                        <div id="ready-text-box" class="ready-text-box">
+                            <div class="ready-text blinkReadyText">
+                                Are you ready?
+                            </div>
+                            <div id="ready-num-text" class="ready-num-text">
+                                3
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="step3-next-buttons" class="next-button-box2">
+                        <div class="button-green2 next-button button-bottom-left retry blinkRetryButton"></div>
+                        <div class="button-green next-button active button-bottom-right result blinkResultButton"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="step-result-box" class="content-container">
+        <div class="content-window">
+            <div class="content-box">
+
+                <div class="content-text-box">
+                    <span class="content-text blinkResultHeadingText">Your Score</span>
+                </div>
+
+                <div class="time-bar-box">
+                    <div class="time-bar-area">
+                        <div id="time-circle" class="time-circle">
+                            <div id="time-point" class="time-point">8</div>
+                        </div>
+                        <div class="time-bar-back"></div>
+                        <div id="time-bar-result" class="time-bar-front"></div>
+                    </div>
+                    <div class="time-bar-value-box">
+                        <div>0 <span class="blinkSecUnit"></span></div>
+                        <div>10 <span class="blinkSecUnit"></span></div>
+                    </div>
+                </div>
+                
+                <div class="result-area">
+                    <div class="image-dryeye-box">
+                        <img class="image-dryeye" src="./images/blink/blink_picture.png">
+                    </div>
+                    <div class="result-text-area">
+                        <div class="result-heading-text blinkResultScoreText"></div>
+                        <div id="result0-box" class="result-box">
+                            <div class="result-icon-image-box">
+                                <span class="result-icon-emoji">&#x1F600;</span>
+                            </div>
+                            <div class="result-comment-box">
+                                <span class="result-comment-text blinkResultComment1_1"></span><br />
+                                <span class="result-comment-text blinkResultComment1_2"></span>
+                                <span class="result-comment-text-bold blinkResultComment1_3"></span>
+                                <span class="result-comment-text blinkResultComment1_4"></span>
+                            </div>
+                        </div>
+                        <div id="result1-box" class="result-box">
+                            <div class="result-icon-image-box">
+                                <span class="result-icon-emoji">&#128577;</span>
+                            </div>
+                            <div class="result-comment-box">
+                                <span class="result-comment-text blinkResultComment2_1"></span><br />
+                                <span class="result-comment-text blinkResultComment2_2"></span>
+                                <span class="result-comment-text-bold blinkResultComment2_3"></span>
+                                <span class="result-comment-text blinkResultComment2_4"></span>
+                            </div>
+                        </div>
+                        <div id="result2-box" class="result-box">
+                            <div class="result-icon-image-box">
+                                <span class="result-icon-emoji">&#128553;</span>
+                            </div>
+                            <div class="result-comment-box">
+                                <span class="result-comment-text blinkResultComment3_1"></span><br />
+                                <span class="result-comment-text blinkResultComment3_2"></span>
+                                <span class="result-comment-text-bold blinkResultComment3_3"></span>
+                                <span class="result-comment-text blinkResultComment3_4"></span>
+                            </div>
+                        </div>
+                        <div class="image-dryeye-sp-box">
+                            <img class="image-dryeye" src="./images/dryeye/dryeye_picture.png">
+                        </div>
+                        <div class="icon-score-table-box">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3" style="width:186px;"><span class="icon-score-text blinkIconScoreText"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="result-icon-sample-emoji">&#128553;</span></td>
+                                        <td><span class="result-icon-sample-emoji">&#128577;</span></td>
+                                        <td><span class="result-icon-sample-emoji">&#x1F600;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="icon-score-sample-text">0 - 4</span></td>
+                                        <td><span class="icon-score-sample-text">5 - 9</span></td>
+                                        <td><span class="icon-score-sample-text">10</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="result-button-area-sp result-retry-button-area-sp">
+                            <div class="button-text retry-button blinkStartAgainButton"></div>
+                        </div>
+                        <div class="result-button-area-pc">
+                            <div class="button-text retry-button button-bottom-left blinkStartAgainButton"></div>
+                            <div class="button-green2 findoutmore-button button-bottom-center blinkFindOutMoreButton"></div>
+                            <div class="button-green buy-button active button-bottom-right blinkBuyButton"></div>
+                        </div>
+                        <div class="result-button-area-sp">
+                            <div class="button-green2 findoutmore-button button-bottom-left blinkFindOutMoreButton"></div>
+                            <div class="button-green buy-button active button-bottom-right blinkBuyButton"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-text-box">
+        <span class="footer-text">
+            <span class="blinkFooterText1"></span><br />
+            <span class="blinkFooterText2"></span>
+        </span>
+    </div>
+
+</div>
+
+<video id="camera" playsinline autoplay></video>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/clmtrackr.min.js"></script>
+<script src="language/settings.js"></script>
+<script src="js/language.js"></script>
+<script src="js/blink.js"></script>
+</body>
+</html>

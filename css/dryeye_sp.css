@@ -1,0 +1,238 @@
+.answer-box {
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    min-width: 326px;
+    padding: 0 10px;
+}
+
+.content-text-box {
+    margin: 24px 20px;
+}
+
+.question-box {
+    width: 330px;
+    margin-bottom: 12px;
+}
+
+.question-text-box {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    width: 330px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.question-text {
+    color: #000;
+    font-size: 1.0rem;
+}
+
+.button-text-big {
+    color: #503394;
+    font-size: 0.9375rem;
+    font-weight: bold;
+    line-height: 0.1rem;
+}
+
+.button-text-small {
+    color: #000;
+    font-size: 0.5rem;
+    line-height: 0.1rem;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type="radio"]:checked + .button-white {
+    background-color: #503394;
+}
+
+input[type="radio"]:checked + .button-white .button-text-big {
+    color: #fff;
+}
+input[type="radio"]:checked + .button-white .button-text-small {
+    color: #fff;
+}
+
+.score-bar-box {
+    font-size: 2.25rem;
+    margin: 45px 25px 20px;
+    padding: 0;
+}
+
+.score-bar-value-box {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.0rem;
+}
+
+.score-bar-area {
+    position: relative;
+    width: 300px;
+    height: 26px;
+}
+
+.score-bar-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 22px;
+    border: 2px solid #000;
+    border-radius: 14px;
+    background-color: #503394;
+}
+
+.score-bar-front {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 150px;
+    height: 22px;
+    border-radius: 13px;
+    background-color: #11A734;
+}
+
+.score-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -42px;
+    left: 150px;
+    width: 38px;
+    height: 42px;
+    background-image: url("../images/dryeye/point_circle.png");
+    background-size: 38px 42px;
+}
+
+.score-point {
+    color: #fff;
+    font-size: 0.5em;
+}
+
+.result-area {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.result-text-area {
+    text-align: center;
+}
+
+.result-box {
+    display: none;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.result-heading-text {
+    text-align: left;
+    font-size: 1.0rem;
+    width: 300px;
+    padding: 0 25px;
+    margin-bottom: 24px;
+}
+
+.result-heading-prefix-text {
+    text-align: left;
+    font-size: 1.0rem;
+}
+
+.result-main-text-box {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.result-main-text {
+    text-align: left;
+    font-size: 2.375rem;
+    font-weight: bold;
+    color: #11A734;
+}
+
+.result-comment-box {
+    text-align: left;
+    width: 220px;
+    padding-right: 10px;
+}
+
+.result-comment-text {
+    font-size: 1.25rem;
+    color: #503394;
+}
+.result-comment-text-bold {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #11A734;
+}
+
+.result-icon-image-box {
+    width: 120px;
+    height: 120px;
+}
+
+.result-icon-emoji {
+    font-size: 5.0rem;
+}
+
+.result-icon-sample-emoji {
+    font-size: 1.5rem !important;
+}
+
+.osdi-score-box {
+    display: flex;
+    justify-content: center;
+}
+
+.osdi-score-text {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color :#503394;
+    margin-bottom: 5px 
+}
+
+.osdi-score-table-box table {
+    margin-bottom: 20px;
+}
+
+.osdi-score-table-box th {
+    color :#fff;
+    font-size: 1.0rem;
+    font-weight: normal;
+    background-color: #503394;
+    border :2px solid #503394;
+    padding: 0 20px;
+    height: 29px;
+}
+
+.osdi-score-table-box td {
+    color :#503394;
+    font-size: 1.0rem;
+    font-weight: normal;
+    background-color: #fff;
+    border :2px solid #503394;
+    padding: 0 20px;
+    height: 29px;
+}
+
+.result-button-area-pc {
+    display: none;
+}
+
+.result-button-area-sp {
+    display: block;
+}
+
+.result-retry-button-area-sp {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+}
